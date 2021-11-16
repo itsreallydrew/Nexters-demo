@@ -147,8 +147,29 @@ body {
   align-self: start;
   justify-self: start;
 }
-.header .seen-logo {
+.header__seenon {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.6rem;
+  color: #aaa;
+}
+.header__seenon::before, .header__seenon::after {
+  content: "";
+  height: 0.1rem;
+  display: block;
+  background-color: currentColor;
+}
+.header__logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 3rem;
+  justify-items: center;
+}
+.header__logos img {
   height: 2.5rem;
+  filter: brightness(70%);
 }
 
 .realtors {
